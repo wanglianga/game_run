@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	body,html{
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background: #000;
+	}
+	canvas{
+		background: url("image/bag.png") repeat-x;
+		background-size: cover;
+	}
+	.start{
+		position: absolute;
+		left:46%;
+		top:530px;
+		z-index: 23;
+	}
+	.live{
+		position: fixed;
+		left: 30px;
+		top: 10px;
+		display: none;
+	}
+	.live li{
+		float: left;
+		margin-left: 10px;
+		width: 30px;
+		height: 30px;
+		list-style:none;
+	}
+	.live li img{
+		width: 100%;
+		height: 100%;
+	}
+	.scoreNew{
+		background-image: url(image/score.png);
+		background-size: cover;
+	}
+	.end{
+		position: absolute;
+		left: 28%;
+		top: 250px;
+		display: none;
+	}
+</style>
+<script src="js/jquery.js"></script>
+<script src="js/hitPix.js"></script>
+<script src="js/game.js"></script>
+<script src="js/play.js"></script>
+<body>
+	<canvas>您的浏览器不支持画布</canvas>
+	<img src="image/run1.png" alt=""  class="walk" hidden>
+	<img src="image/run2.png" alt=""  class="walk" hidden>
+	<img src="image/run3.png" alt=""  class="walk" hidden>
+	<img src="image/run4.png" alt=""  class="walk" hidden>
+	<img src="image/run5.png" alt=""  class="walk" hidden>
+	<img src="image/run6.png" alt=""  class="walk" hidden>
+	<img src="image/run7.png" alt=""  class="walk" hidden>
+	<img src="image/jump4.png" alt=""  class="jump" hidden>
+	<img src="image/hinder/6.png" alt="" class="hinderImg" hidden>
+	<img src="image/hinder/7.png" alt="" class="hinderImg" hidden>
+	<img src="image/hinder/8.png" alt="" class="hinderImg" hidden>
+	<img src="image/hinder/9.png" alt="" class="hinderImg" hidden>
+	<img src="image/hinder/10.png" alt="" class="hinderImg" hidden>
+	<img src="image/hinder/11.png" alt="" class="hinderImg" hidden>
+	<img src="image/hinder/12.png" alt="" class="hinderImg" hidden>
+	<img src="image/hinder/13.png" alt="" class="hinderImg" hidden>
+	<img src="image/hinder/14.png" alt="" class="hinderImg" hidden>
+    <div class="start"><img src="image/ok.png" alt=""></div>
+	<ul class="live">
+		<li class="liveli"><img src="image/live.png" alt=""></li>
+		<li class="liveli"><img src="image/live.png" alt=""></li>
+		<li class="liveli"><img src="image/live.png" alt=""></li>
+		<li class="liveli"><img src="image/live.png" alt=""></li>
+		<li class="liveli"><img src="image/live.png" alt=""></li>
+	</ul>
+    <div class="end">
+		<img src="image/end.png" alt="">
+		<img src="image/restart.png" class="endbtn" alt="" style="width: 160px;height: 55px;position:absolute;left: 35%;top: 270px">
+	</div>
+</body>
+</html>
