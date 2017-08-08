@@ -14,13 +14,15 @@
 		background: #000;
 	}
 	canvas{
-		background: url("image/bag.png") repeat-x;
+		background: url("image/back.jpg") repeat-x;
 		background-size: cover;
 	}
-	.start{
-		position: absolute;
-		left:46%;
-		top:530px;
+	.start, .startNew{
+		width: 100%;
+		position: fixed;
+		text-align: center;
+		left:0;
+		bottom:20px;
 		z-index: 23;
 	}
 	.live{
@@ -46,8 +48,9 @@
 	}
 	.end{
 		position: absolute;
-		left: 28%;
-		top: 250px;
+		left: 0;
+		width: 100%;
+		text-align: center;
 		display: none;
 	}
 </style>
@@ -84,7 +87,12 @@
 	</ul>
     <div class="end">
 		<img src="image/end.png" alt="">
-		<img src="image/restart.png" class="endbtn" alt="" style="width: 160px;height: 55px;position:absolute;left: 35%;top: 270px">
+		<div class="startNew"><img src="image/restart.png" class="endbtn" alt="" style="width: 160px;height: 55px"></div>
 	</div>
 </body>
+<script>
+	$(function(){
+	    $(".end").css("top",($(document).height()-$(".end").height())/2+'px')
+	})
+</script>
 </html>

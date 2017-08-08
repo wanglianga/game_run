@@ -49,7 +49,6 @@ function stone(cobj, x, y,color) {
         obj.color=color;
         stoneArr.push(obj);
     }
-    console.log(stoneArr.length);
     var t = setInterval(function () {
         for (var i = 0; i < stoneArr.length; i++) {
             stoneArr[i].draw();
@@ -80,7 +79,7 @@ function person(canvas,cobj,runsImg,jumpImg){
     this.canvas.height=canvas.height;
     this.speedy=5;
     this.zhongli=10;
-    this.endy=460;
+    this.endy=canvas.height-130;
 }
 person.prototype={
 	draw:function(){
@@ -227,7 +226,7 @@ function hinder(canvas,cobj,hinderImg){
     this.cobj=cobj;
     this.hinderImg=hinderImg;
     this.x=canvas.width;
-    this.y=540;
+    this.y=canvas.height-50;
     this.width=56;
     this.height=60;
     this.state=0;
